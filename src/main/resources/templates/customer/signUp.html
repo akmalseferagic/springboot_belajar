@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Enigma 1</title>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="/js/postrequest.js"></script>
+          <script src="/js/getrequest.js"></script>
+    </head>
+<body>
+<form id="customerForm">
+    <table align="center" border="1" width="25%">
+        <tr style="background-color:beige;">
+            <td>
+                    <h2 align="center">SignUp Customer</h2>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                    <br>
+                    <label>First Name :</label> 
+                    <input type="text" pattern="[A-Za-z ]+" placeholder="Enter First Name" name="firstname" value="" id="firstname">
+                    <br><br>
+                    <label>Last Name :</label> 
+                    <input type="text" id="firtsname" pattern="[A-Za-z ]+" placeholder="Enter Last Name" name="lastname" value="" id="lastname">
+                    <br><br>
+                    <label>User Name :</label> 
+                    <input type="text" pattern="[A-Za-z ]+" placeholder="Enter Username" name="username" id="username">
+                    <br><br>
+                    <label>Password  :</label> 
+                    <input type="password" pattern="[A-Za-z ]+" placeholder="Enter Password" name="password" value="" id="password"> 
+                    <br><br>
+                    <label>Phone Type  :</label> 
+                    <select name="phoneType">
+                        <option id="phonetype"  value="Android">Android</option>
+                        <option value="Iphone">Iphone</option>
+                    </select>
+                    <br><br>
+                    <label>Phone Number  :</label> 
+                    <input type="text" pattern="[0-9]+" placeholder="Enter Phone Number" name="phonenumber" value=""> 
+                    <br><br>
+                    <label> Birth Date :</label>
+                    <input type="date" id="birthdate" name="BirthDate" >
+                    <br><br>
+                    <label> </label> 
+                    
+            </td>
+            <br>
+                
+        </tr>
+        <tr>
+            <td align="center">
+                    <input type="submit" style="background-color:green;">
+                    <input type="reset" style="background-color:yellow;">
+            </td>
+        </tr>
+        <tr>
+                <td align="center">
+                        <button><a href="index.html">Back Menu</a></button>
+                        
+                </td>
+            </tr>
+            
+    </table>
+</form>
+
+</body>
+</html>
