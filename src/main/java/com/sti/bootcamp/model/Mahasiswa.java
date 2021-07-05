@@ -34,7 +34,7 @@ public class Mahasiswa {
         @Column
         private String angkatan_mhs;
         
-        public Mahasiswa() {	}
+        public Mahasiswa() {	} //constructor 
 
         public Mahasiswa(int nim_mhs, String nama_mhs, String prosudi_mhs, String angkata_mhs) {
 		this.nim_mhs = nim_mhs;
