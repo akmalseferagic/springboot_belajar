@@ -29,12 +29,16 @@ public class Matakuliah {
 	private String nama_matkul;
 	@Column
 	private String kode_matkul;
+        @Column
+	private int sks_matkul;
+        
         
         public Matakuliah() {	}
 
-        public Matakuliah(String nama_matkul, String kode_matkul) {
+        public Matakuliah(String nama_matkul, String kode_matkul, int sks_matkul) {
 		this.nama_matkul = nama_matkul;
 		this.kode_matkul = kode_matkul;
+                this.sks_matkul = sks_matkul;
 	}        
 
     public int getId_matkul() {
@@ -60,7 +64,15 @@ public class Matakuliah {
     public void setKode_matkul(String kode_matkul) {
         this.kode_matkul = kode_matkul;
     }
-        
-        
+
+    public int getSks_matkul() {
+        return sks_matkul;
+    }
+
+    public void setSks_matkul(int sks_matkul) {
+        this.sks_matkul = sks_matkul;
+    }
+
+
     
 }

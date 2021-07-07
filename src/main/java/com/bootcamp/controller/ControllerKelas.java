@@ -35,7 +35,7 @@ public class ControllerKelas {
 		try {
 			Kelas kelas = kelasDao.getById(Integer.valueOf(id));
 			if(kelas == null) {
-				return "data tidak ditmukan";
+				return "data tidak ditemukan";
 			}else {
 				return "hello"+ kelas.getId_kelas();
 			}

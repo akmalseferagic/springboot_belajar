@@ -39,7 +39,7 @@ public class ControllerMahasiswa {
 			if(mahasiswa == null) {
 				return "data tidak ditmukan";
 			}else {
-				return "hello"+ mahasiswa.getNama_mhs();
+				return "hello"+ mahasiswa.getNama_mahasiswa();
 			}
 		}catch(NumberFormatException e) {
 			return "salah format input";

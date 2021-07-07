@@ -29,10 +29,6 @@ public class DaoSpringConfig {
 		return new MatakuliahDaoImpl();
 	}
         
-//	@Bean
-//	public TransactionDao transactionDao() {
-//		return new TransactioDaoImpl();
-//	}
 	@Bean
     public WebMvcConfigurerAdapter corsConfigurer() {
         return new WebMvcConfigurerAdapter() {

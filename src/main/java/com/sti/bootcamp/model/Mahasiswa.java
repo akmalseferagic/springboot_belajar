@@ -23,65 +23,86 @@ public class Mahasiswa {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq_gen")
     @SequenceGenerator(name = "users_seq_gen", sequenceName = "mahasiswa_id_mhs_seq")
     
-    private int id_mhs;
+    private int id_mahasiswa;
     
         @Column
-	private int nim_mhs;
+	private int nim_mahasiswa;
 	@Column
-	private String nama_mhs;
+	private String nama_mahasiswa;
         @Column
-        private String prosudi_mhs;
+        private int id_prodi;
         @Column
-        private String angkatan_mhs;
+        private int id_matkul;
+        @Column
+        private int id_semester;
+        @Column
+        private int id_dosenpa;
         
         public Mahasiswa() {	} //constructor 
 
-        public Mahasiswa(int nim_mhs, String nama_mhs, String prosudi_mhs, String angkata_mhs) {
-		this.nim_mhs = nim_mhs;
-                this.nama_mhs = nama_mhs;
-		this.prosudi_mhs = prosudi_mhs;
+        public Mahasiswa(int nim_mahasiswa, String nama_mahasiswa, int id_prodi, int id_matkul, int id_semester, int id_dosenpa) {
+		this.nim_mahasiswa = nim_mahasiswa;
+                this.nama_mahasiswa = nama_mahasiswa;
+		this.id_prodi = id_prodi;
+                this.id_matkul = id_matkul;
+                this.id_semester = id_semester;
+                this.id_dosenpa = id_dosenpa;
 	}
 
-    public int getId_mhs() {
-        return id_mhs;
+    public int getId_mahasiswa() {
+        return id_mahasiswa;
     }
 
-    public void setId_mhs(int id_mhs) {
-        this.id_mhs = id_mhs;
+    public void setId_mahasiswa(int id_mahasiswa) {
+        this.id_mahasiswa = id_mahasiswa;
     }
 
-    public int getNim_mhs() {
-        return nim_mhs;
+    public int getNim_mahasiswa() {
+        return nim_mahasiswa;
     }
 
-    public void setNim_mhs(int nim_mhs) {
-        this.nim_mhs = nim_mhs;
+    public void setNim_mahasiswa(int nim_mahasiswa) {
+        this.nim_mahasiswa = nim_mahasiswa;
     }
 
-    public String getNama_mhs() {
-        return nama_mhs;
+    public String getNama_mahasiswa() {
+        return nama_mahasiswa;
     }
 
-    public void setNama_mhs(String nama_mhs) {
-        this.nama_mhs = nama_mhs;
+    public void setNama_mahasiswa(String nama_mahasiswa) {
+        this.nama_mahasiswa = nama_mahasiswa;
     }
 
-    public String getProsudi_mhs() {
-        return prosudi_mhs;
+    public int getId_prodi() {
+        return id_prodi;
     }
 
-    public void setProsudi_mhs(String prosudi_mhs) {
-        this.prosudi_mhs = prosudi_mhs;
+    public void setId_prodi(int id_prodi) {
+        this.id_prodi = id_prodi;
     }
 
-    public String getAngkatan_mhs() {
-        return angkatan_mhs;
+    public int getId_matkul() {
+        return id_matkul;
     }
 
-    public void setAngkatan_mhs(String angkatan_mhs) {
-        this.angkatan_mhs = angkatan_mhs;
+    public void setId_matkul(int id_matkul) {
+        this.id_matkul = id_matkul;
     }
-        
-        
-    
+
+    public int getId_semester() {
+        return id_semester;
+    }
+
+    public void setId_semester(int id_semester) {
+        this.id_semester = id_semester;
+    }
+
+    public int getId_dosenpa() {
+        return id_dosenpa;
+    }
+
+    public void setId_dosenpa(int id_dosenpa) {
+        this.id_dosenpa = id_dosenpa;
+    }
+
 }
