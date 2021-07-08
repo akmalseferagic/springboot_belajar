@@ -5,19 +5,19 @@
  */
 package com.sti.bootcamp.dao;
 
-import com.sti.bootcamp.model.Mahasiswa;
+import com.sti.bootcamp.model.Dosenpa;
 import java.util.List;
 
 /**
  *
  * @author techinasia888
  */
-public interface MahasiswaDao {
+public interface DosenpaDao {
     
-        Mahasiswa getById (int id) throws Exception;
-	Mahasiswa save (Mahasiswa mahasiswa) throws Exception;
-	void delete (Mahasiswa mahasiswa) throws Exception;
+    Dosenpa getById (int id) throws Exception;
+	Dosenpa save (Dosenpa dosenpa) throws Exception;
+	void delete (Dosenpa dosenpa) throws Exception;
 	
-	List<Mahasiswa> getList() throws Exception;
+	List<Dosenpa> getList() throws Exception;
     
 }

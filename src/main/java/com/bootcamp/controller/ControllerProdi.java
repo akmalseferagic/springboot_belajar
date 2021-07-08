@@ -5,10 +5,10 @@
  */
 package com.bootcamp.controller;
 
-import com.sti.bootcamp.dao.MahasiswaDao;
 import com.sti.bootcamp.dao.MatakuliahDao;
+import com.sti.bootcamp.dao.ProdiDao;
 import com.sti.bootcamp.model.Mahasiswa;
-import com.sti.bootcamp.model.Matakuliah;
+import com.sti.bootcamp.model.Prodi;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,20 +26,20 @@ import org.springframework.web.bind.annotation.RestController;
  * @author techinasia888
  */
 @RestController
-@RequestMapping("/Mahasiswa")
-public class ControllerMahasiswa {
+@RequestMapping("/Prodi")
+public class ControllerProdi {
     
-    @Autowired
-	private MahasiswaDao mahasiswaDao;
-    
+       @Autowired
+	private ProdiDao prodiDao;
+
     @GetMapping("/get")
-	public String viewMahasiswa(@RequestParam(value="id", defaultValue="") String id) {
+	public String viewProdi(@RequestParam(value="id", defaultValue="") String id) {
 		try {
-			Mahasiswa mahasiswa = mahasiswaDao.getById(Integer.valueOf(id));
-			if(mahasiswa == null) {
+			Prodi prodi = prodiDao.getById(Integer.valueOf(id));
+			if(prodi == null) {
 				return "data tidak ditmukan";
 			}else {
-				return "hello"+ mahasiswa.getNama_mahasiswa();
+				return "hello"+ prodi.getNama_prodi();
 			}
 		}catch(NumberFormatException e) {
 			return "salah format input";
@@ -49,25 +49,27 @@ public class ControllerMahasiswa {
 	}
         
     @PostMapping("/post")
-        public Mahasiswa postMahasiswa(@RequestBody Mahasiswa mahasiswa) throws Exception{
-            Mahasiswa data = mahasiswaDao.save(mahasiswa);
+        public Prodi postProdi(@RequestBody Prodi prodi) throws Exception{
+            Prodi data = prodiDao.save(prodi);
                 return data;
 	}
        
     @DeleteMapping("/delete/{id}")
-	public void Mahasiswa (@PathVariable ("id") Mahasiswa data) throws Exception{
-		mahasiswaDao.delete(data);
+	public void Prodi (@PathVariable ("id") Prodi data) throws Exception{
+		prodiDao.delete(data);
 	}
         
     @PutMapping("/put")
-	public Mahasiswa update(@RequestBody Mahasiswa mahasiswa) throws Exception {
-		Mahasiswa update = mahasiswaDao.save(mahasiswa);
+	public Prodi update(@RequestBody Prodi prodi) throws Exception {
+		Prodi update = prodiDao.save(prodi);
 		return update;
 	}
         
     @GetMapping("/getall")
-	public List<Mahasiswa> getlist() throws Exception{
-		List<Mahasiswa> list = mahasiswaDao.getList();
+	public List<Prodi> getlist() throws Exception{
+		List<Prodi> list = prodiDao.getList();
 		return list;
-	}
+	}       
+       
+    
 }

@@ -31,7 +31,7 @@ public class ControllerMatakuliah {
     @Autowired
 	private MatakuliahDao matakuliahDao;
     
-    	@GetMapping("/matakuliah")
+    	@GetMapping("/get")
 	public String viewMatakuliah(@RequestParam(value="id", defaultValue="") String id) {
 		try {
 			Matakuliah matakuliah = matakuliahDao.getById(Integer.valueOf(id));
@@ -53,18 +53,18 @@ public class ControllerMatakuliah {
 		return data;
 	}
 	
-	@DeleteMapping("/matakuliah/{id}")
+	@DeleteMapping("/delete/{id}")
 	public void Matakuliah(@PathVariable ("id") Matakuliah data) throws Exception{
 		matakuliahDao.delete(data);
 	}
 	
-	@PutMapping("/matakuliah")
+	@PutMapping("/put")
 	public Matakuliah update(@RequestBody Matakuliah matakuliah) throws Exception {
 		Matakuliah update = matakuliahDao.save(matakuliah);
 		return update;
 	}
 	
-	@GetMapping("/matakuliahs")
+	@GetMapping("/getall")
 	public List<Matakuliah> getlist() throws Exception{
 		List<Matakuliah> list = matakuliahDao.getList();
 		return list;

@@ -5,10 +5,8 @@
  */
 package com.bootcamp.controller;
 
-import com.sti.bootcamp.dao.MahasiswaDao;
-import com.sti.bootcamp.dao.MatakuliahDao;
-import com.sti.bootcamp.model.Mahasiswa;
-import com.sti.bootcamp.model.Matakuliah;
+import com.sti.bootcamp.dao.DosenpaDao;
+import com.sti.bootcamp.model.Dosenpa;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,20 +24,20 @@ import org.springframework.web.bind.annotation.RestController;
  * @author techinasia888
  */
 @RestController
-@RequestMapping("/Mahasiswa")
-public class ControllerMahasiswa {
+@RequestMapping("/Dosenpa")
+public class ControllerDosenpa {
     
     @Autowired
-	private MahasiswaDao mahasiswaDao;
+    private DosenpaDao dosenpaDao;
     
-    @GetMapping("/get")
-	public String viewMahasiswa(@RequestParam(value="id", defaultValue="") String id) {
+        @GetMapping("/get")
+	public String viewDosenpa(@RequestParam(value="id", defaultValue="") String id) {
 		try {
-			Mahasiswa mahasiswa = mahasiswaDao.getById(Integer.valueOf(id));
-			if(mahasiswa == null) {
+			Dosenpa dosenpa = dosenpaDao.getById(Integer.valueOf(id));
+			if(dosenpa == null) {
 				return "data tidak ditmukan";
 			}else {
-				return "hello"+ mahasiswa.getNama_mahasiswa();
+				return "hello"+ dosenpa.getNama_dosenpa();
 			}
 		}catch(NumberFormatException e) {
 			return "salah format input";
@@ -49,25 +47,26 @@ public class ControllerMahasiswa {
 	}
         
     @PostMapping("/post")
-        public Mahasiswa postMahasiswa(@RequestBody Mahasiswa mahasiswa) throws Exception{
-            Mahasiswa data = mahasiswaDao.save(mahasiswa);
+        public Dosenpa postDosenpa(@RequestBody Dosenpa dosenpa) throws Exception{
+            Dosenpa data = dosenpaDao.save(dosenpa);
                 return data;
 	}
        
     @DeleteMapping("/delete/{id}")
-	public void Mahasiswa (@PathVariable ("id") Mahasiswa data) throws Exception{
-		mahasiswaDao.delete(data);
+	public void Dosenpa (@PathVariable ("id") Dosenpa data) throws Exception{
+		dosenpaDao.delete(data);
 	}
         
     @PutMapping("/put")
-	public Mahasiswa update(@RequestBody Mahasiswa mahasiswa) throws Exception {
-		Mahasiswa update = mahasiswaDao.save(mahasiswa);
+	public Dosenpa update(@RequestBody Dosenpa dosenpa) throws Exception {
+		Dosenpa update =dosenpaDao.save(dosenpa);
 		return update;
 	}
         
     @GetMapping("/getall")
-	public List<Mahasiswa> getlist() throws Exception{
-		List<Mahasiswa> list = mahasiswaDao.getList();
+	public List<Dosenpa> getlist() throws Exception{
+		List<Dosenpa> list =dosenpaDao.getList();
 		return list;
 	}
+    
 }

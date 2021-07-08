@@ -5,10 +5,8 @@
  */
 package com.bootcamp.controller;
 
-import com.sti.bootcamp.dao.MahasiswaDao;
-import com.sti.bootcamp.dao.MatakuliahDao;
-import com.sti.bootcamp.model.Mahasiswa;
-import com.sti.bootcamp.model.Matakuliah;
+import com.sti.bootcamp.dao.SemesterDao;
+import com.sti.bootcamp.model.Semester;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,20 +24,20 @@ import org.springframework.web.bind.annotation.RestController;
  * @author techinasia888
  */
 @RestController
-@RequestMapping("/Mahasiswa")
-public class ControllerMahasiswa {
+@RequestMapping("/Semester")
+public class ControllerSemester {
     
-    @Autowired
-	private MahasiswaDao mahasiswaDao;
-    
+        @Autowired
+	private SemesterDao semesterDao;
+
     @GetMapping("/get")
-	public String viewMahasiswa(@RequestParam(value="id", defaultValue="") String id) {
+	public String viewSemester(@RequestParam(value="id", defaultValue="") String id) {
 		try {
-			Mahasiswa mahasiswa = mahasiswaDao.getById(Integer.valueOf(id));
-			if(mahasiswa == null) {
+			Semester semester = semesterDao.getById(Integer.valueOf(id));
+			if(semester == null) {
 				return "data tidak ditmukan";
 			}else {
-				return "hello"+ mahasiswa.getNama_mahasiswa();
+				return "hello"+ semester.getSemester();
 			}
 		}catch(NumberFormatException e) {
 			return "salah format input";
@@ -49,25 +47,28 @@ public class ControllerMahasiswa {
 	}
         
     @PostMapping("/post")
-        public Mahasiswa postMahasiswa(@RequestBody Mahasiswa mahasiswa) throws Exception{
-            Mahasiswa data = mahasiswaDao.save(mahasiswa);
+        public Semester postSemester(@RequestBody Semester semester) throws Exception{
+            Semester data = semesterDao.save(semester);
                 return data;
 	}
        
     @DeleteMapping("/delete/{id}")
-	public void Mahasiswa (@PathVariable ("id") Mahasiswa data) throws Exception{
-		mahasiswaDao.delete(data);
+	public void Semester (@PathVariable ("id") Semester data) throws Exception{
+		semesterDao.delete(data);
 	}
         
     @PutMapping("/put")
-	public Mahasiswa update(@RequestBody Mahasiswa mahasiswa) throws Exception {
-		Mahasiswa update = mahasiswaDao.save(mahasiswa);
+	public Semester update(@RequestBody Semester semester) throws Exception {
+		Semester update = semesterDao.save(semester);
 		return update;
 	}
         
     @GetMapping("/getall")
-	public List<Mahasiswa> getlist() throws Exception{
-		List<Mahasiswa> list = mahasiswaDao.getList();
+	public List<Semester> getlist() throws Exception{
+		List<Semester> list = semesterDao.getList();
 		return list;
-	}
+	}       
+       
+    
+    
 }

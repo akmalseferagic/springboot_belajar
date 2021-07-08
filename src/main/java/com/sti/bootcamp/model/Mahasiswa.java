@@ -20,13 +20,9 @@ import javax.persistence.SequenceGenerator;
 public class Mahasiswa {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq_gen")
-    @SequenceGenerator(name = "users_seq_gen", sequenceName = "mahasiswa_id_mhs_seq")
     
-    private int id_mahasiswa;
+    private int nim_mahasiswa;
     
-        @Column
-	private int nim_mahasiswa;
 	@Column
 	private String nama_mahasiswa;
         @Column
@@ -48,14 +44,6 @@ public class Mahasiswa {
                 this.id_semester = id_semester;
                 this.id_dosenpa = id_dosenpa;
 	}
-
-    public int getId_mahasiswa() {
-        return id_mahasiswa;
-    }
-
-    public void setId_mahasiswa(int id_mahasiswa) {
-        this.id_mahasiswa = id_mahasiswa;
-    }
 
     public int getNim_mahasiswa() {
         return nim_mahasiswa;
@@ -104,5 +92,7 @@ public class Mahasiswa {
     public void setId_dosenpa(int id_dosenpa) {
         this.id_dosenpa = id_dosenpa;
     }
+
+
 
 }

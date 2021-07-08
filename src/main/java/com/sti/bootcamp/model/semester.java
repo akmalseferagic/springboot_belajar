@@ -17,7 +17,7 @@ import javax.persistence.SequenceGenerator;
  * @author techinasia888
  */
 @Entity
-public class semester {
+public class Semester {
     
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq_gen")
@@ -28,11 +28,11 @@ public class semester {
     @Column
     private String semester;
     
-    public semester(){
+    public Semester(){
         
     }
     
-    public semester(String semester){
+    public Semester(String semester){
         this.semester = semester;
     }
 
