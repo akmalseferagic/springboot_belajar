@@ -1,7 +1,6 @@
 package com.sti.bootcamp.config;
 
 import com.sti.bootcamp.dao.DosenpaDao;
-import com.sti.bootcamp.dao.KelasDao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -13,7 +12,6 @@ import com.sti.bootcamp.dao.MatakuliahDao;
 import com.sti.bootcamp.dao.ProdiDao;
 import com.sti.bootcamp.dao.SemesterDao;
 import com.sti.bootcamp.dao.impl.DosenpaDaoImpl;
-import com.sti.bootcamp.dao.impl.KelasDaoImpl;
 import com.sti.bootcamp.dao.impl.MahasiswaDaoImpl;
 import com.sti.bootcamp.dao.impl.MatakuliahDaoImpl;
 import com.sti.bootcamp.dao.impl.ProdiDaoImpl;
@@ -21,10 +19,7 @@ import com.sti.bootcamp.dao.impl.SemesterDaoImpl;
 
 @Configuration
 public class DaoSpringConfig {
-        @Bean
-        public KelasDao kelasDao(){
-            return new KelasDaoImpl();
-        }
+    
         @Bean
 	public MahasiswaDao mahasiswaDao() {
 	    return new MahasiswaDaoImpl();

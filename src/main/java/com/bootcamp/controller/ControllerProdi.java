@@ -5,9 +5,7 @@
  */
 package com.bootcamp.controller;
 
-import com.sti.bootcamp.dao.MatakuliahDao;
 import com.sti.bootcamp.dao.ProdiDao;
-import com.sti.bootcamp.model.Mahasiswa;
 import com.sti.bootcamp.model.Prodi;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
