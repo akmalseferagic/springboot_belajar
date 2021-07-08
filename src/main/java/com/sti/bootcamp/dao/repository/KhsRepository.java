@@ -5,10 +5,13 @@
  */
 package com.sti.bootcamp.dao.repository;
 
+import com.sti.bootcamp.model.Khs;
+import org.springframework.data.repository.PagingAndSortingRepository;
+
 /**
  *
  * @author techinasia888
  */
-public interface KhsRepository {
+public interface KhsRepository extends PagingAndSortingRepository<Khs, Integer> {
     
 }
