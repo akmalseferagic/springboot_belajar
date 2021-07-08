@@ -1,5 +1,7 @@
 package com.sti.bootcamp.config;
 
+import com.sti.bootcamp.dao.KhsDao;
+import com.sti.bootcamp.dao.impl.KhsDaoImpl;
 import com.sti.bootcamp.dao.DosenpaDao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -44,6 +46,12 @@ public class DaoSpringConfig {
 	public SemesterDao semesterDao() {
 		return new SemesterDaoImpl();
 	}
+        
+        @Bean
+	public KhsDao khsDao() {
+		return new KhsDaoImpl();
+	}
+        
         
 	@Bean
     public WebMvcConfigurerAdapter corsConfigurer() {

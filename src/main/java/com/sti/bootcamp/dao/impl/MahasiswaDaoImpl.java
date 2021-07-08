@@ -49,11 +49,5 @@ public class MahasiswaDaoImpl extends BaseImpl implements MahasiswaDao {
 		TypedQuery<Mahasiswa> q = em.createQuery(query);
 		return q.getResultList();
 	}
-    
 
-    
-   
-    
-    
-    
 }
