@@ -26,24 +26,32 @@ public class Khs {
     private int id_khs;
     
     @Column
-    private int nim_mahasiswa;
+    private String nim_mhs;
     
     @Column
-    private String nilai_khs;
+    private String kode_mk;
     
     @Column
-    private Float bobot_nilai;
+    private int smt_khs;
     
     @Column
-    private Float jumlah_nilai;
+    private int thajaran;
+    
+    @Column
+    private Float nilai;
+    
+    @Column
+    private Float jumlahnilai;
     
     public Khs ( ){ }
     
-    public Khs (int nim_mahasiswa, String nilai_khs, Float bobot_nilai, Float jumlah_nilai){
-        this.nim_mahasiswa = nim_mahasiswa;
-        this.nilai_khs = nilai_khs;
-        this.bobot_nilai = bobot_nilai;
-        this.jumlah_nilai = jumlah_nilai;
+    public Khs (String nim_mhs, String kode_mk, int smt_khs, int thajaran, Float nilai, Float jumlahnilai){
+        this.nim_mhs = nim_mhs;
+        this.kode_mk = kode_mk;
+        this.smt_khs = smt_khs;
+        this.thajaran = thajaran;
+        this.nilai = nilai;
+        this.jumlahnilai = jumlahnilai;
         
     }
 
@@ -55,39 +63,54 @@ public class Khs {
         this.id_khs = id_khs;
     }
 
-    public int getNim_mahasiswa() {
-        return nim_mahasiswa;
+    public String getNim_mhs() {
+        return nim_mhs;
     }
 
-    public void setNim_mahasiswa(int nim_mahasiswa) {
-        this.nim_mahasiswa = nim_mahasiswa;
+    public void setNim_mhs(String nim_mhs) {
+        this.nim_mhs = nim_mhs;
     }
 
-    public String getNilai_khs() {
-        return nilai_khs;
+    public String getKode_mk() {
+        return kode_mk;
     }
 
-    public void setNilai_khs(String nilai_khs) {
-        this.nilai_khs = nilai_khs;
+    public void setKode_mk(String kode_mk) {
+        this.kode_mk = kode_mk;
     }
 
-    public Float getBobot_nilai() {
-        return bobot_nilai;
+    public int getSmt_khs() {
+        return smt_khs;
     }
 
-    public void setBobot_nilai(Float bobot_nilai) {
-        this.bobot_nilai = bobot_nilai;
+    public void setSmt_khs(int smt_khs) {
+        this.smt_khs = smt_khs;
     }
 
-    public Float getJumlah_nilai() {
-        return jumlah_nilai;
+    public int getThajaran() {
+        return thajaran;
     }
 
-    public void setJumlah_nilai(Float jumlah_nilai) {
-        this.jumlah_nilai = jumlah_nilai;
+    public void setThajaran(int thajaran) {
+        this.thajaran = thajaran;
+    }
+
+    public Float getNilai() {
+        return nilai;
+    }
+
+    public void setNilai(Float nilai) {
+        this.nilai = nilai;
+    }
+
+    public Float getJumlahnilai() {
+        return jumlahnilai;
+    }
+
+    public void setJumlahnilai(Float jumlahnilai) {
+        this.jumlahnilai = jumlahnilai;
     }
     
     
-    
-    
+ 
 }

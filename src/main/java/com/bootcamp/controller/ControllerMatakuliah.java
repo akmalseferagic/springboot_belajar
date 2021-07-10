@@ -38,7 +38,7 @@ public class ControllerMatakuliah {
 			if(matakuliah == null) {
 				return "data tidak ditmukan";
 			}else {
-				return "hello"+ matakuliah.getNama_matkul();
+				return "hello"+ matakuliah.getKode_mk();
 			}
 		}catch(NumberFormatException e) {
 			return "salah format input";

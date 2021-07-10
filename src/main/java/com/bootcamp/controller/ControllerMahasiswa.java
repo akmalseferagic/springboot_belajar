@@ -6,7 +6,6 @@
 package com.bootcamp.controller;
 
 import com.sti.bootcamp.dao.MahasiswaDao;
-import com.sti.bootcamp.dao.MatakuliahDao;
 import com.sti.bootcamp.model.Mahasiswa;
 import com.sti.bootcamp.model.Matakuliah;
 import java.util.List;
@@ -39,7 +38,7 @@ public class ControllerMahasiswa {
 			if(mahasiswa == null) {
 				return "data tidak ditmukan";
 			}else {
-				return "hello"+ mahasiswa.getNama_mahasiswa();
+				return "hello"+ mahasiswa.getNim_mhs();
 			}
 		}catch(NumberFormatException e) {
 			return "salah format input";

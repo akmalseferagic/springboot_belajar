@@ -21,45 +21,60 @@ public class Matakuliah {
     
         @Id
         
-	private String kode_matkul;
+	private String kode_mk;
     
         @Column
-	private String nama_matkul;
+	private String nama_mk;
         @Column
-	private int sks_matkul;
-        
+	private int sks_mk;
+        @Column
+	private int smt_mk;
         
         public Matakuliah() {	}
 
-        public Matakuliah(String nama_matkul, String kode_matkul, int sks_matkul) {
-		this.nama_matkul = nama_matkul;
-		this.kode_matkul = kode_matkul;
-                this.sks_matkul = sks_matkul;
+        public Matakuliah(String kode_mk, String nama_mk, int sks_mk, int smt_mk) {
+		this.kode_mk = kode_mk;
+		this.nama_mk = nama_mk;
+                this.sks_mk = sks_mk;
+                this.smt_mk = smt_mk;
 	}        
 
     public String getKode_matkul() {
-        return kode_matkul;
+        return kode_mk;
     }
 
-    public void setKode_matkul(String kode_matkul) {
-        this.kode_matkul = kode_matkul;
+    public String getKode_mk() {
+        return kode_mk;
     }
 
-    public String getNama_matkul() {
-        return nama_matkul;
+    public void setKode_mk(String kode_mk) {
+        this.kode_mk = kode_mk;
     }
 
-    public void setNama_matkul(String nama_matkul) {
-        this.nama_matkul = nama_matkul;
+    public String getNama_mk() {
+        return nama_mk;
     }
 
-    public int getSks_matkul() {
-        return sks_matkul;
+    public void setNama_mk(String nama_mk) {
+        this.nama_mk = nama_mk;
     }
 
-    public void setSks_matkul(int sks_matkul) {
-        this.sks_matkul = sks_matkul;
+    public int getSks_mk() {
+        return sks_mk;
     }
 
-  
+    public void setSks_mk(int sks_mk) {
+        this.sks_mk = sks_mk;
+    }
+
+    public int getSmt_mk() {
+        return smt_mk;
+    }
+
+    public void setSmt_mk(int smt_mk) {
+        this.smt_mk = smt_mk;
+    }
+
+    
+    
 }
