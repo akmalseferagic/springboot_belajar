@@ -20,6 +20,8 @@ import javax.persistence.SequenceGenerator;
 public class Mahasiswa {
     
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq_gen")
+    @SequenceGenerator(name = "users_seq_gen", sequenceName = "mahasiswa_id_mahasiswa_seq")
     
     private int nim_mahasiswa;
     
@@ -28,21 +30,24 @@ public class Mahasiswa {
         @Column
         private int id_prodi;
         @Column
-        private int id_matkul;
+        private String kode_matkul;
         @Column
         private int id_semester;
         @Column
         private int id_dosenpa;
+        @Column
+        private int id_mahasiswa;
         
         public Mahasiswa() {	} //constructor 
 
-        public Mahasiswa(int nim_mahasiswa, String nama_mahasiswa, int id_prodi, int id_matkul, int id_semester, int id_dosenpa) {
+        public Mahasiswa(int nim_mahasiswa, String nama_mahasiswa, int id_prodi, String kode_matkul, int id_semester, int id_dosenpa, int id_mahasiswa) {
 		this.nim_mahasiswa = nim_mahasiswa;
                 this.nama_mahasiswa = nama_mahasiswa;
 		this.id_prodi = id_prodi;
-                this.id_matkul = id_matkul;
+                this.kode_matkul = kode_matkul;
                 this.id_semester = id_semester;
                 this.id_dosenpa = id_dosenpa;
+                this.id_mahasiswa = id_mahasiswa;
 	}
 
     public int getNim_mahasiswa() {
@@ -69,12 +74,12 @@ public class Mahasiswa {
         this.id_prodi = id_prodi;
     }
 
-    public int getId_matkul() {
-        return id_matkul;
+    public String getKode_matkul() {
+        return kode_matkul;
     }
 
-    public void setId_matkul(int id_matkul) {
-        this.id_matkul = id_matkul;
+    public void setKode_matkul(String kode_matkul) {
+        this.kode_matkul = kode_matkul;
     }
 
     public int getId_semester() {
@@ -93,6 +98,13 @@ public class Mahasiswa {
         this.id_dosenpa = id_dosenpa;
     }
 
+    public int getId_mahasiswa() {
+        return id_mahasiswa;
+    }
 
+    public void setId_mahasiswa(int id_mahasiswa) {
+        this.id_mahasiswa = id_mahasiswa;
+    }
 
+   
 }

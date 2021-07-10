@@ -20,15 +20,11 @@ import javax.persistence.SequenceGenerator;
 public class Matakuliah {
     
         @Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq_gen")
-        @SequenceGenerator(name = "users_seq_gen", sequenceName = "matakuliah_id_matkul_seq")
         
-	private int id_matkul;
+	private String kode_matkul;
     
         @Column
 	private String nama_matkul;
-	@Column
-	private String kode_matkul;
         @Column
 	private int sks_matkul;
         
@@ -41,12 +37,12 @@ public class Matakuliah {
                 this.sks_matkul = sks_matkul;
 	}        
 
-    public int getId_matkul() {
-        return id_matkul;
+    public String getKode_matkul() {
+        return kode_matkul;
     }
 
-    public void setId_matkul(int id_matkul) {
-        this.id_matkul = id_matkul;
+    public void setKode_matkul(String kode_matkul) {
+        this.kode_matkul = kode_matkul;
     }
 
     public String getNama_matkul() {
@@ -57,14 +53,6 @@ public class Matakuliah {
         this.nama_matkul = nama_matkul;
     }
 
-    public String getKode_matkul() {
-        return kode_matkul;
-    }
-
-    public void setKode_matkul(String kode_matkul) {
-        this.kode_matkul = kode_matkul;
-    }
-
     public int getSks_matkul() {
         return sks_matkul;
     }
@@ -73,6 +61,5 @@ public class Matakuliah {
         this.sks_matkul = sks_matkul;
     }
 
-
-    
+  
 }
