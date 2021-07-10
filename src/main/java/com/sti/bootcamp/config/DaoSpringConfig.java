@@ -1,8 +1,6 @@
 package com.sti.bootcamp.config;
 
-import com.sti.bootcamp.dao.DosenpaDao;
 import com.sti.bootcamp.dao.KhsDao;
-import com.sti.bootcamp.dao.KhsDetailDao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -11,15 +9,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 import com.sti.bootcamp.dao.MahasiswaDao;
 import com.sti.bootcamp.dao.MatakuliahDao;
-import com.sti.bootcamp.dao.ProdiDao;
-import com.sti.bootcamp.dao.SemesterDao;
-import com.sti.bootcamp.dao.impl.DosenpaDaoImpl;
 import com.sti.bootcamp.dao.impl.KhsDaoImpl;
-import com.sti.bootcamp.dao.impl.KhsDetailDaoImpl;
 import com.sti.bootcamp.dao.impl.MahasiswaDaoImpl;
 import com.sti.bootcamp.dao.impl.MatakuliahDaoImpl;
-import com.sti.bootcamp.dao.impl.ProdiDaoImpl;
-import com.sti.bootcamp.dao.impl.SemesterDaoImpl;
 
 @Configuration
 public class DaoSpringConfig {
@@ -33,30 +25,10 @@ public class DaoSpringConfig {
 	public MatakuliahDao matakuliahDao() {
 		return new MatakuliahDaoImpl();
 	}
-        
-        @Bean
-	public ProdiDao prodiDao() {
-		return new ProdiDaoImpl();
-	}
-        
-        @Bean
-	public DosenpaDao dosenpaDao() {
-		return new DosenpaDaoImpl();
-	}
-        
-        @Bean
-	public SemesterDao semesterDao() {
-		return new SemesterDaoImpl();
-	}
-        
+      
         @Bean
 	public KhsDao khsDao() {
 		return new KhsDaoImpl();
-	}
-        
-        @Bean
-	public KhsDetailDao khsdetailDao() {
-		return new KhsDetailDaoImpl();
 	}
         
 	@Bean
