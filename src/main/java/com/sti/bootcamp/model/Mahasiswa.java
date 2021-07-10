@@ -23,9 +23,11 @@ public class Mahasiswa {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq_gen")
     @SequenceGenerator(name = "users_seq_gen", sequenceName = "mahasiswa_id_mahasiswa_seq")
     
-    private int nim_mahasiswa;
+    private int id_mahasiswa;
     
-	@Column
+        @Column
+        private int nim_mahasiswa;
+        @Column
 	private String nama_mahasiswa;
         @Column
         private int id_prodi;
@@ -35,8 +37,7 @@ public class Mahasiswa {
         private int id_semester;
         @Column
         private int id_dosenpa;
-        @Column
-        private int id_mahasiswa;
+  
         
         public Mahasiswa() {	} //constructor 
 
