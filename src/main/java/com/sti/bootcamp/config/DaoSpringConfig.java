@@ -32,7 +32,7 @@ public class DaoSpringConfig {
 	}
         
 	@Bean
-    public WebMvcConfigurerAdapter corsConfigurer() {
+        public WebMvcConfigurerAdapter corsConfigurer() {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {

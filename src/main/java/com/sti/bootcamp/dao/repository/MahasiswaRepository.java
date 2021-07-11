@@ -12,6 +12,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  *
  * @author techinasia888
  */
-public interface MahasiswaRepository extends PagingAndSortingRepository<Mahasiswa, Integer> {
+public interface MahasiswaRepository extends PagingAndSortingRepository<Mahasiswa, String> {
     
 }

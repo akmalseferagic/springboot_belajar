@@ -39,6 +39,11 @@ public class KhsDaoImpl extends BaseImpl implements KhsDao {
     public void delete(Khs khs) throws Exception {
        	repository.delete(khs); //To change body of generated methods, choose Tools | Templates.
     }
+    @Override
+    public List findKhs(String nim_mhs) throws Exception {
+        repository.findKhs(nim_mhs);
+        return repository.findKhs(nim_mhs);
+    }
 
     @Override
     public List<Khs> getList() throws Exception {

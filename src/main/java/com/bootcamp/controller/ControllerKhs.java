@@ -47,6 +47,25 @@ public class ControllerKhs {
 		}
 	}
         
+//    @GetMapping("/khs/{nim_mhs}")
+//        public String findKhs(@RequestParam(value="nim_mhs", defaultValue="") String nim_mhs){
+//            try {
+//                    khsDao.findKhs(String.valueOf(nim_mhs));
+//		}catch(NumberFormatException e) {
+//			return "salah format input";
+//		}catch(Exception e) {
+//			return String.format("terjadi kesalahan : %s", e.getMessage());
+//		}
+//        return null;
+//          
+//        }
+        
+    @GetMapping("/khs/{nim_mhs}")
+    public List<Khs> findKhs (@PathVariable ("nim_mhs") String data) throws Exception{
+		List<Khs> list = khsDao.findKhs(data);
+            return list;
+	}
+        
     @PostMapping("/post")
         public Khs postKhs(@RequestBody Khs khs) throws Exception{
             Khs data = khsDao.save(khs);

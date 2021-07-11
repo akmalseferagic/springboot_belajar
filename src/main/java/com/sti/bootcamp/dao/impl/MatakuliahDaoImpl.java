@@ -24,10 +24,6 @@ public class MatakuliahDaoImpl extends BaseImpl implements MatakuliahDao {
     @Autowired
 	private MatakuliahRepository repository; //yang punya hubungan ke database
 
-    @Override
-    public Matakuliah getById(int id) throws Exception {
-        return repository.findOne(id); //To change body of generated methods, choose Tools | Templates.
-    }
 
     @Override
     public Matakuliah save(Matakuliah matakuliah) throws Exception {
@@ -48,5 +44,10 @@ public class MatakuliahDaoImpl extends BaseImpl implements MatakuliahDao {
 		TypedQuery<Matakuliah> q = em.createQuery(query);
 		return q.getResultList();
 	}
+
+    @Override
+    public Matakuliah getById(int id) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

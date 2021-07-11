@@ -24,11 +24,6 @@ public class MahasiswaDaoImpl extends BaseImpl implements MahasiswaDao {
     
     @Autowired
 	private MahasiswaRepository repository;
-    
-    @Override
-    public Mahasiswa getById(int id) throws Exception {
-        return repository.findOne(id); //To change body of generated methods, choose Tools | Templates.
-    }
 
     @Override
     public Mahasiswa save(Mahasiswa mahasiswa) throws Exception {
@@ -49,5 +44,10 @@ public class MahasiswaDaoImpl extends BaseImpl implements MahasiswaDao {
 		TypedQuery<Mahasiswa> q = em.createQuery(query);
 		return q.getResultList();
 	}
+
+    @Override
+    public Mahasiswa getById(int id) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }

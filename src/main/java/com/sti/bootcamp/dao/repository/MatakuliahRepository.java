@@ -12,6 +12,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  *
  * @author techinasia888
  */
-public interface MatakuliahRepository extends PagingAndSortingRepository<Matakuliah, Integer> {
+public interface MatakuliahRepository extends PagingAndSortingRepository<Matakuliah, String> {
     
 }
