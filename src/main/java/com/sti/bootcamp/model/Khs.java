@@ -5,6 +5,7 @@
  */
 package com.sti.bootcamp.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,7 +33,7 @@ public class Khs {
     private String kode_mk;
     
     @Column
-    private int smt_khs;
+    private String smt_khs;
     
     @Column
     private int thajaran;
@@ -41,11 +42,12 @@ public class Khs {
     private Float nilai;
     
     @Column
+    @JsonIgnore
     private Float jumlahnilai;
     
     public Khs ( ){ }
     
-    public Khs (String nim_mhs, String kode_mk, int smt_khs, int thajaran, Float nilai, Float jumlahnilai){
+    public Khs (String nim_mhs, String kode_mk, String smt_khs, int thajaran, Float nilai, Float jumlahnilai){
         this.nim_mhs = nim_mhs;
         this.kode_mk = kode_mk;
         this.smt_khs = smt_khs;
@@ -79,11 +81,11 @@ public class Khs {
         this.kode_mk = kode_mk;
     }
 
-    public int getSmt_khs() {
+    public String getSmt_khs() {
         return smt_khs;
     }
 
-    public void setSmt_khs(int smt_khs) {
+    public void setSmt_khs(String smt_khs) {
         this.smt_khs = smt_khs;
     }
 
@@ -110,7 +112,7 @@ public class Khs {
     public void setJumlahnilai(Float jumlahnilai) {
         this.jumlahnilai = jumlahnilai;
     }
-    
-    
+
+  
  
 }

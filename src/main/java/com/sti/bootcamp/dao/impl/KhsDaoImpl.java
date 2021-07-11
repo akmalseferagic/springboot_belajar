@@ -54,4 +54,10 @@ public class KhsDaoImpl extends BaseImpl implements KhsDao {
 		TypedQuery<Khs> q = em.createQuery(query);
 		return q.getResultList();
 	}
+
+    @Override
+    public Integer getSks(String kode_mk) throws Exception {
+        repository.getSks(kode_mk);
+        return repository.getSks(kode_mk);
+    }
 }

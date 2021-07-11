@@ -60,7 +60,7 @@ public class ControllerKhs {
 //          
 //        }
         
-    @GetMapping("/find/{nim_mhs}")
+   @GetMapping("/find/{nim_mhs}")
     public List<Khs> findKhs (@PathVariable ("nim_mhs") String data) throws Exception{
 		List<Khs> list = khsDao.findKhs(data);
             return list;
@@ -68,6 +68,7 @@ public class ControllerKhs {
         
     @PostMapping("/post")
         public Khs postKhs(@RequestBody Khs khs) throws Exception{
+            khs.getKode_mk();
             Khs data = khsDao.save(khs);
                 return data;
 	}

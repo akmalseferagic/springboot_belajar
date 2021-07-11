@@ -18,6 +18,7 @@ public interface KhsDao {
 	Khs save (Khs khs) throws Exception;
 	void delete (Khs khs) throws Exception;
         List<Khs> findKhs (String nim_mhs) throws Exception;
+        Integer getSks (String kode_mk)throws Exception;
 	List<Khs> getList() throws Exception;
     
 }
