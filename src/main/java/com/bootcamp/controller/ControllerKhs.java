@@ -60,7 +60,7 @@ public class ControllerKhs {
 //          
 //        }
         
-    @GetMapping("/khs/{nim_mhs}")
+    @GetMapping("/find/{nim_mhs}")
     public List<Khs> findKhs (@PathVariable ("nim_mhs") String data) throws Exception{
 		List<Khs> list = khsDao.findKhs(data);
             return list;
