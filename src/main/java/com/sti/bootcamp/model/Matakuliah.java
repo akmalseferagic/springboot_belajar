@@ -39,9 +39,6 @@ public class Matakuliah {
                 this.smt_mk = smt_mk;
 	}        
 
-    public String getKode_matkul() {
-        return kode_mk;
-    }
 
     public String getKode_mk() {
         return kode_mk;
