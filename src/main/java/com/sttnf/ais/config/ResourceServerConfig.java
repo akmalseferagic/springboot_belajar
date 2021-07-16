@@ -37,6 +37,9 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 anonymous().disable()
                 .authorizeRequests()
                 .antMatchers("/users/**").access("hasRole('ADMIN')")
+                .antMatchers("/Khs/**").access("hasRole('ADMIN')")
+                .antMatchers("/Mahasiswa/**").access("hasRole('ADMIN')")
+                .antMatchers("/Matakuliah/**").access("hasRole('ADMIN')")
                 .and().exceptionHandling().accessDeniedHandler(new OAuth2AccessDeniedHandler());
 	}
 
