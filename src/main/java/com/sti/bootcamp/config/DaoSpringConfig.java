@@ -9,9 +9,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 import com.sti.bootcamp.dao.MahasiswaDao;
 import com.sti.bootcamp.dao.MatakuliahDao;
+import com.sti.bootcamp.dao.UserDao;
 import com.sti.bootcamp.dao.impl.KhsDaoImpl;
 import com.sti.bootcamp.dao.impl.MahasiswaDaoImpl;
 import com.sti.bootcamp.dao.impl.MatakuliahDaoImpl;
+import com.sti.bootcamp.service.UserService;
+
 
 @Configuration
 public class DaoSpringConfig {
@@ -30,6 +33,7 @@ public class DaoSpringConfig {
 	public KhsDao khsDao() {
 		return new KhsDaoImpl();
 	}
+        
         
 	@Bean
         public WebMvcConfigurerAdapter corsConfigurer() {

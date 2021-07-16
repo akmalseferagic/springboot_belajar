@@ -11,7 +11,7 @@ import com.sti.bootcamp.config.DaoSpringConfig;
 @Configuration
 @SpringBootApplication
 @Import({DaoSpringConfig.class})
-@ComponentScan({"com.bootcamp.controller"})
+@ComponentScan({"com.sti.bootcamp.*"})
 public class App {
 	public static void main(String[] args) {
         SpringApplication.run(App.class, args);

@@ -1,4 +1,4 @@
-package com.bootcamp.controller;
+package com.sti.bootcamp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

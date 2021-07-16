@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bootcamp.controller;
+package com.sti.bootcamp.controller;
 
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;

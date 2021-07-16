@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bootcamp.controller;
+package com.sti.bootcamp.controller;
 
 import com.sti.bootcamp.dao.KhsDao;
 import com.sti.bootcamp.model.Khs;
@@ -65,10 +65,15 @@ public class ControllerKhs {
 		List<Khs> list = khsDao.findKhs(data);
             return list;
 	}
+    
         
     @PostMapping("/post")
         public Khs postKhs(@RequestBody Khs khs) throws Exception{
-            khs.getKode_mk();
+            String kd_mk = khs.getKode_mk();
+            Integer jumSks = khsDao.getSks(kd_mk);
+            Float nilai = khs.getNilai();
+            Float jumlahnilai = jumSks*nilai;
+            
             Khs data = khsDao.save(khs);
                 return data;
 	}

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bootcamp.controller;
+package com.sti.bootcamp.controller;
 
 import com.sti.bootcamp.dao.MahasiswaDao;
 import com.sti.bootcamp.model.Mahasiswa;
